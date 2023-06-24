@@ -1,8 +1,8 @@
 # XtraMagic
 
 ## Purpose
-This extension adds extra information to the stock table at Magic Formula Investing Stock Screener 
-[site](https://www.magicformulainvesting.com/).
+This extension adds extra information to the stock table at [Magic Formula Investing Stock Screener 
+site](https://www.magicformulainvesting.com/).
 
 ## Background
 In 2005, Joel Greenblatt published a book that is considered one of the classics of finance literature. In The 
