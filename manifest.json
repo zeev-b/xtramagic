@@ -1,0 +1,43 @@
+{
+  "name": "Magic Formula Extended",
+  "description": "Extension that enables adding more financial data to the Magic Formula table, including CSV export",
+  "homepage_url": "https://github.com/llagerlof/fresh-chrome-extension",
+  "version": "2.0.0",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "Add more financial data to the Magic Formula table"
+  },
+  "content_scripts": [
+    {
+      "run_at" : "document_start",
+      "js": ["before.js"],
+      "matches": [
+        "https://www.magicformulainvesting.com/*"
+      ]
+    },
+    {
+      "run_at" : "document_idle",
+      "js": ["after.js"],
+      "matches": [
+        "https://www.magicformulainvesting.com/*"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.magicformulainvesting.com/*",
+    "https://query2.finance.yahoo.com/*"
+  ],
+  "icons": {
+    "16": "/images/financial-profit-16.png",
+    "32": "/images/financial-profit-32.png",
+    "48": "/images/financial-profit-48.png",
+    "128": "/images/financial-profit-128.png"
+  }
+}
